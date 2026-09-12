@@ -46,3 +46,70 @@ body { background: var(--paper); color: var(--ink); transition: background-color
 [data-theme="dark"] .skeleton { background: linear-gradient(90deg, #1a2821 25%, #26392e 50%, #1a2821 75%); background-size: 200% 100%; }
 [data-theme="dark"] .form-error { background: #4b2825; color: #ffc0b3; }
 [data-theme="dark"] .language-switcher select { color: var(--ink); }
+
+.landing-page { overflow: hidden; }
+.landing-hero { min-height: 650px; position: relative; overflow: hidden; background: var(--ink); color: #f4f6ed; }
+.landing-hero-inner { max-width: 1240px; min-height: 650px; margin: auto; padding: 110px 32px 90px; display: grid; grid-template-columns: 1.05fr .95fr; gap: 70px; align-items: center; position: relative; z-index: 1; }
+.landing-hero-copy { max-width: 650px; }
+.landing-hero h1 { margin: 26px 0 22px; font-size: clamp(50px, 6.4vw, 86px); line-height: .98; letter-spacing: -.07em; font-weight: 500; }
+.landing-hero h1 em, .landing-cta h2 em { font-family: "Playfair Display", serif; font-weight: 500; }
+.landing-hero-copy > p { max-width: 470px; color: #b9c8bf; line-height: 1.7; font-size: 15px; margin: 0; }
+.landing-actions { display: flex; flex-wrap: wrap; gap: 13px; margin-top: 32px; }
+.landing-hero .button-ghost { color: #f4f6ed; }
+.landing-browse { border: 1px solid rgba(244,246,237,.25); }
+.landing-checks { display: flex; flex-wrap: wrap; gap: 18px; margin-top: 26px; color: #9fb1a5; font-size: 10px; }
+.landing-checks span { display: inline-flex; align-items: center; gap: 6px; }
+.landing-checks svg { color: var(--lime); }
+.landing-hero-visual { min-height: 420px; position: relative; display: grid; place-items: center; }
+.landing-visual-label { position: absolute; top: 8px; right: 5%; color: #9fb1a5; font: 10px "DM Mono", monospace; letter-spacing: .14em; }
+.landing-visual-card { position: absolute; border-radius: 4px; }
+.landing-visual-card-main { width: min(100%, 390px); min-height: 310px; padding: 38px; display: flex; flex-direction: column; justify-content: end; background: #f0f5ed; color: var(--ink); box-shadow: 22px 28px 0 rgba(217,241,107,.16); transform: rotate(3deg); }
+.landing-visual-kicker { margin-bottom: auto; color: var(--green); font: 10px "DM Mono", monospace; text-transform: uppercase; letter-spacing: .1em; }
+.landing-visual-card-main strong { max-width: 270px; font-size: 39px; line-height: .98; letter-spacing: -.065em; font-weight: 500; }
+.landing-visual-card-main em { max-width: 270px; margin-top: 5px; font: 500 30px/1 "Playfair Display", serif; }
+.landing-visual-line { height: 1px; margin: 24px 0 12px; background: #c8d7cb; }
+.landing-visual-card-main small { color: #748579; font: 10px "DM Mono", monospace; }
+.landing-visual-card-float { right: 0; bottom: 45px; display: flex; align-items: center; gap: 10px; padding: 14px 18px; background: var(--lime); color: var(--ink); font-size: 12px; font-weight: 600; transform: rotate(-4deg); box-shadow: 0 14px 30px rgba(0,0,0,.2); }
+.landing-orb { position: absolute; border-radius: 50%; pointer-events: none; }
+.landing-orb-one { width: 600px; height: 600px; right: -170px; top: -220px; border: 1px solid rgba(217,241,107,.17); box-shadow: 0 0 0 70px rgba(217,241,107,.025), 0 0 0 140px rgba(217,241,107,.02); }
+.landing-orb-two { width: 180px; height: 180px; left: 38%; bottom: -115px; background: rgba(36,116,82,.32); }
+.landing-trust { max-width: 1240px; min-height: 110px; margin: auto; padding: 30px 32px; display: flex; align-items: center; justify-content: space-between; gap: 30px; border-bottom: 1px solid var(--line); color: var(--muted); font-size: 11px; }
+.landing-trust-list { display: flex; flex-wrap: wrap; justify-content: end; gap: 30px; color: var(--ink); font: 600 12px "DM Mono", monospace; }
+.landing-section { max-width: 1240px; margin: auto; padding: 105px 32px; }
+.landing-section-heading { display: flex; justify-content: space-between; align-items: end; gap: 40px; margin-bottom: 58px; }
+.landing-section-heading h2 { margin: 22px 0 0; font-size: clamp(42px, 4.8vw, 62px); line-height: .98; letter-spacing: -.07em; font-weight: 500; }
+.landing-section-heading > p { max-width: 340px; margin: 0 0 4px; color: var(--muted); line-height: 1.7; font-size: 13px; }
+.landing-feature-grid, .landing-step-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.landing-feature-grid article { min-height: 230px; padding: 28px; border: 1px solid var(--line); background: color-mix(in srgb, var(--paper) 72%, var(--mint)); }
+.landing-feature-icon { width: 44px; height: 44px; display: grid; place-items: center; border-radius: 50%; background: var(--mint); color: var(--green); }
+.landing-feature-grid h3, .landing-step-grid h3 { margin: 30px 0 9px; font-size: 16px; }
+.landing-feature-grid p, .landing-step-grid p { margin: 0; color: var(--muted); line-height: 1.65; font-size: 12px; }
+.landing-process { padding-top: 25px; }
+.landing-step-grid { border-top: 1px solid var(--line); }
+.landing-step-grid article { padding: 25px 20px 20px 0; border-bottom: 1px solid var(--line); }
+.landing-step-grid article > span { color: var(--green); font: 11px "DM Mono", monospace; }
+.landing-step-grid h3 { margin-top: 43px; }
+.landing-cta { max-width: 1240px; margin: 0 auto 100px; padding: 64px; display: flex; align-items: end; justify-content: space-between; gap: 30px; background: var(--ink); color: #f4f6ed; }
+.landing-cta h2 { max-width: 600px; margin: 22px 0 12px; font-size: clamp(39px, 4.5vw, 59px); line-height: .98; letter-spacing: -.07em; font-weight: 500; }
+.landing-cta p { max-width: 430px; margin: 0; color: #b4c3ba; font-size: 13px; line-height: 1.65; }
+.registration-content.auth-content { max-width: 550px; margin-top: 54px; }
+.registration-form { gap: 14px; }
+.role-fieldset { min-width: 0; margin: 5px 0 0; padding: 0; border: 0; }
+.role-fieldset legend { margin-bottom: 9px; color: #5f7065; font-size: 11px; }
+.role-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.role-card { min-height: 140px; position: relative; padding: 17px; display: flex; flex-direction: column; align-items: start; gap: 7px; border: 1px solid #cdd9cf; border-radius: 4px; background: var(--paper); color: var(--ink); text-align: left; cursor: pointer; }
+.role-card:hover, .role-card.active { border-color: var(--green); box-shadow: 0 0 0 3px rgba(36,116,82,.1); }
+.role-card-icon { color: var(--green); }
+.role-card strong { font-size: 13px; }
+.role-card small { max-width: 175px; color: var(--muted); line-height: 1.5; font-size: 10px; }
+.role-card-check { position: absolute; top: 17px; right: 17px; color: var(--green); }
+.terms-copy, .account-switch { color: var(--muted); font-size: 10px; line-height: 1.6; }
+.terms-copy { margin: 19px 0 0; }
+.account-switch { margin: 5px 0 0; }
+.account-switch a { color: var(--green); font-weight: 600; }
+.registration-aside-mark { width: 46px; height: 46px; margin-bottom: 34px; display: grid; place-items: center; border-radius: 14px 14px 14px 3px; background: var(--lime); color: var(--ink); font: italic 500 28px "Playfair Display", serif; }
+[data-theme="dark"] .landing-hero, [data-theme="dark"] .landing-cta { background: #0b1210; }
+[data-theme="dark"] .landing-feature-grid article { background: #17231e; }
+[data-theme="dark"] .role-fieldset legend { color: #a9baaf; }
+[data-theme="dark"] .role-card { border-color: #405648; background: #17231e; }
+ (max-width: 800px) { .landing-hero-inner { display: block; min-height: auto; padding: 75px 20px 95px; }.landing-hero-visual { min-height: 360px; margin-top: 55px; }.landing-visual-card-main { width: min(100%, 330px); min-height: 270px; padding: 28px; }.landing-visual-card-main strong { font-size: 32px; }.landing-visual-card-main em { font-size: 25px; }.landing-visual-card-float { right: 1%; bottom: 28px; }.landing-trust { margin: 0 20px; padding: 27px 0; display: block; }.landing-trust-list { justify-content: start; gap: 15px 22px; margin-top: 20px; }.landing-section { padding: 70px 20px; }.landing-section-heading { display: block; margin-bottom: 35px; }.landing-section-heading > p { margin-top: 25px; }.landing-feature-grid, .landing-step-grid { grid-template-columns: 1fr; }.landing-feature-grid article { min-height: 0; }.landing-step-grid article { padding-right: 0; }.landing-cta { margin: 0 20px 65px; padding: 45px 25px; display: block; }.landing-cta .button { margin-top: 28px; }.role-grid { grid-template-columns: 1fr; }.registration-content.auth-content { margin-top: 55px; } }
