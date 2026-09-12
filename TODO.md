@@ -14,6 +14,7 @@ This is the current implementation checklist for Archer. It reflects the code th
 - [x] Demo sign-in/register screen.
 - [x] Local development ports documented: web `5000`, API `5001`.
 - [x] Mobile project removed from the scope.
+- [x] Light/dark theme toggle with system-preference initialization, persistence, and browser theme-color support.
 
 ## Not implemented — highest priority
 
@@ -111,6 +112,8 @@ Currency display for USD and THB exists, but payment execution and conversion ar
 - [ ] WCAG 2.2 AA accessibility review.
 - [ ] Keyboard navigation and focus-state review.
 - [ ] Screen-reader labels and translated accessibility text review.
+- [ ] Verify WCAG contrast for both light and dark themes.
+- [ ] Test light/dark themes together with English/Burmese typography across routes and responsive breakpoints.
 - [ ] Error monitoring and client-side query-error reporting.
 - [ ] Performance review for images, fonts, JavaScript bundle size, and query waterfalls.
 
