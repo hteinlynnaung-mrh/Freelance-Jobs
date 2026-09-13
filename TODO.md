@@ -13,7 +13,7 @@ This is the current implementation checklist for Archer. It reflects the code th
 - [x] USD and THB display support.
 - [x] Demo sign-in/register screen.
 - [x] Local development ports documented: web `5000`, API `5001`.
-- [x] Mobile project removed from the scope.
+- [x] Mobile app re-introduced in `mobile/` with Expo SDK 52, Expo Router v4, TanStack Query v5, NativeWind, English/Burmese i18n, and secure auth session management.
 - [x] Light/dark theme toggle with system-preference initialization, persistence, and browser theme-color support.
 
 ## Not implemented — highest priority

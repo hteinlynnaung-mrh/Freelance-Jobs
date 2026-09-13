@@ -4,8 +4,8 @@
 
 - `app/` is the React/Vite website.
 - `api/` is the independent Express/Prisma/SQLite API.
-- The mobile project has been removed from scope.
-- Keep the website and API independently runnable; integrate through the documented HTTP API.
+- `mobile/` is the Expo React Native app (iOS + Android). It was re-introduced and consumes the same `/api/v1` contract.
+- Keep all three independently runnable; integrate through the documented HTTP API.
 
 ## Local development
 
@@ -13,6 +13,8 @@
 - Use pnpm and install dependencies from the directory being worked on.
 - Website: run `pnpm dev` in `app/`; it serves on port `5000`.
 - API: run `pnpm dev` in `api/`; it serves on port `5001`.
+- Mobile: run `pnpm dev` in `mobile/`; opens the Expo dev server. Scan QR with Expo Go or press `i`/`a` for simulator.
+  - Set `EXPO_PUBLIC_API_URL` in `mobile/.env` to your machine's LAN IP when testing on a physical device (e.g. `http://192.168.1.x:5001`). Leave as `http://localhost:5001` for simulators.
 - The website uses the Vite `/api` proxy in local development. Keep `app/.env` `VITE_API_URL` empty unless a remote API is intentional.
 - Do not commit secrets. Use `.env.example` files as templates.
 
@@ -50,3 +52,17 @@ pnpm --dir api test
 ```
 
 When database schema or seed data changes, also run the appropriate Prisma generate, migration, and seed commands with care for existing local data.
+
+For mobile changes:
+
+```bash
+pnpm --dir mobile typecheck
+```
+
+## Mobile implementation standards
+
+- Use the same TypeScript patterns. Components use NativeWind v4 `className` props; avoid raw `StyleSheet` unless necessary.
+- Mirror i18n keys between `mobile/src/i18n/translations.ts` and `app/src/i18n/translations.ts`. Add to both.
+- Burmese typography rules from `.cursor/skills/burmese-i18n/SKILL.md` apply on mobile too: use `leading-relaxed` for Burmese text, no `letterSpacing`, no fixed heights that clip glyphs.
+- Store auth tokens in `expo-secure-store` only. Never log tokens.
+- Prefer `useQuery` + `useMutation` from TanStack Query for all server state.
